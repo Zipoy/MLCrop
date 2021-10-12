@@ -6,6 +6,8 @@ import pickle
 import warnings
 
 
+st.beta_set_page_config(page_title="Crop Recommender", page_icon="🌿", layout='centered', initial_sidebar_state="collapsed")
+
 def load_model(modelfile):
 	loaded_model = pickle.load(open(modelfile, 'rb'))
 	return loaded_model
@@ -14,7 +16,7 @@ def main():
     # title
     html_temp = """
     <div>
-    <h1 style="color:MEDIUMSEAGREEN;text-align:left;"> Crop Recommendation </h1>
+    <h1 style="color:MEDIUMSEAGREEN;text-align:left;"> Crop Recommendation  🌱 </h1>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
@@ -28,13 +30,13 @@ def main():
             However, in agriculture, it is critical that the recommendations made are correct and precise, as errors can result in significant material and capital loss.
             """)
         '''
-        ## How does it work
+        ## How does it work ❓ 
         Complete all the parameters and the machine learning model will predict the most suitable crops to grow in a particular farm based on various parameters
         '''
 
 
     with col2:
-        st.subheader(" Find out the most suitable crop to grow in your farm")
+        st.subheader(" Find out the most suitable crop to grow in your farm 👨‍🌾")
         N = st.number_input("Nitrogen", 1,10000)
         P = st.number_input("Phosporus", 1,10000)
         K = st.number_input("Potassium", 1,10000)
@@ -51,10 +53,10 @@ def main():
             loaded_model = load_model('model.pkl')
             prediction = loaded_model.predict(single_pred)
             col1.write('''
-		    ## Results
+		    ## Results 🔍 
 		    ''')
             col1.success(f"{prediction.item().title()} are recommended by the A.I for your farm.")
-     
+      #code for html ☘️ 🌾 🌳 👨‍🌾  🍃
 
     st.warning("Note: This A.I application is for educational/demo purposes only and cannot be relied upon.")
     hide_menu_style = """
