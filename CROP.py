@@ -28,7 +28,7 @@ def main():
             However, in agriculture, it is critical that the recommendations made are correct and precise, as errors can result in significant material and capital loss.
             """)
         '''
-        ## How does it work ❓ 
+        ## How does it work
         Complete all the parameters and the machine learning model will predict the most suitable crops to grow in a particular farm based on various parameters
         '''
 
