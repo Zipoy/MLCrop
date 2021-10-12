@@ -6,7 +6,7 @@ import pickle
 import warnings
 
 
-streamlit.set_page_config(page_title=None, page_icon=None, layout='centered', initial_sidebar_state='auto')
+st.set_page_config(page_title=None, page_icon=None, layout='centered', initial_sidebar_state='auto')
 
 def load_model(modelfile):
 	loaded_model = pickle.load(open(modelfile, 'rb'))
