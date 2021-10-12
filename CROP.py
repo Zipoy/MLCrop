@@ -6,7 +6,7 @@ import pickle
 import warnings
 
 
-st.beta_set_page_config(page_title="Crop Recommender", page_icon="🌿", layout='centered', initial_sidebar_state="collapsed")
+streamlit.set_page_config(page_title=None, page_icon=None, layout='centered', initial_sidebar_state='auto')
 
 def load_model(modelfile):
 	loaded_model = pickle.load(open(modelfile, 'rb'))
