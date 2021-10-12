@@ -53,7 +53,7 @@ def main():
             loaded_model = load_model('model.pkl')
             prediction = loaded_model.predict(single_pred)
             col1.write('''
-		    ## Results 🔍 
+		    ## Results
 		    ''')
             col1.success(f"{prediction.item().title()} are recommended by the A.I for your farm.")
      
